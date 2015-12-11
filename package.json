@@ -1,0 +1,27 @@
+{
+  "name": "b-moda-store",
+  "version": "1.0.0",
+  "description": "Bmodastore Front-End",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BurakGozet/Bmodastore_Front-End.git"
+  },
+  "author": "BurakGozet <gozetburak@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1",
+    "jshint": "^2.9.1-rc1"
+  }
+}
