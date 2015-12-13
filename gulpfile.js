@@ -1,25 +1,28 @@
-var gulp        = require('gulp'),
-concat          = require('gulp-concat'),
-less            = require('gulp-less'),
-notify          = require('gulp-notify'),
-jshint          = require('gulp-jshint'),
-uglify          = require('gulp-uglify'),
-autoprefixer    = require('gulp-autoprefixer'),
-livereload      = require('gulp-livereload'),
-rename          = require("gulp-rename");
+var gulp = require('gulp'),
+concat = require('gulp-concat'),
+less = require('gulp-less'),
+notify = require('gulp-notify'),
+jshint = require('gulp-jshint'),
+uglify = require('gulp-uglify'),
+autoprefixer = require('gulp-autoprefixer'),
+rename = require("gulp-rename"),
+minifycss = require('gulp-minify-css'),
+concatcss = require('gulp-concat-css'),
+colors = require('colors'),
+browserSync = require('browser-sync').create();
 
 var paths = {
-  less:{
-    src:'assets/css/less/base.less',
-    watch:'assets/css/less/**/*.*',
+  styles: {
+    src: ['assets/css/libs/**/*.*','assets/css/less/base.less'],
+    watch: 'assets/css/',
     dest:'assets/css/',
     destname:'main.css'
   },
   scripts:{
-    src:'assets/js/*.*',
-    watch:'assets/js/**/*.*',
-    dest:'assets/js/',
-    destname:'scripts.js'
+    src: 'assets/js/*.*',
+    watch: 'assets/js/**/*.*',
+    dest: 'assets/js/',
+    destname: 'scripts.js'
   }
 };
 
@@ -32,13 +35,34 @@ var handleError = function() {
  this.emit('end');
 };
 
-gulp.task('less', function() {
-  gulp.src(paths.less.src)
+function date(){
+  return '['+new Date().toISOString().
+  replace(/T/, ' ').
+  replace(/\..+/, '')+'] ';
+}
+
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server: {
+      baseDir: "./",
+      proxy: "localhost:80"
+    },
+    ui: {
+      port: 80
+    }
+  });
+});
+
+gulp.task('styles', function() {
+  gulp.src(paths.styles.src)
+  .pipe(concat(paths.styles.destname))
   .pipe(less())
-  .pipe(rename(paths.less.destname))
-  .pipe(gulp.dest(paths.less.dest))
-  .pipe(livereload())
+  .pipe(gulp.dest(paths.styles.dest))
+  .pipe(browserSync.stream())
+  .pipe(rename({suffix: ".min"}))
+  .pipe(gulp.dest(paths.styles.dest))
   .on('error', handleError);
+  console.log(date().inverse.green + ' Styles task run!'.inverse.yellow);
 });
 
 gulp.task('scripts', function() {
@@ -46,9 +70,9 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('watch',function () {
-  livereload.listen({ basePath: '../', port:'3000', start:true});
-  gulp.watch(paths.less.watch, ['less']).on('error', handleError);
-  gulp.watch(paths.scripts.watch, ['scripts']).on('error', handleError);
+  gulp.watch([paths.styles.watch+'**/*.*','!'+paths.styles.watch+paths.styles.destname, '!'+paths.styles.watch+'main.min.css'], ['styles'],browserSync.reload).on('error', handleError);
+  gulp.watch(paths.scripts.watch, ['scripts'],browserSync.reload).on('error', handleError);
+  gulp.watch("*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch','styles','browser-sync']);
