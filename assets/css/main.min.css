@@ -9745,7 +9745,6 @@ a:active {
 }
 .nav-bar__items {
   list-style-type: none;
-  transition: all 3s ease 0s;
 }
 .nav-bar__item a {
   float: left;
@@ -9793,6 +9792,7 @@ a:active {
   }
   .nav-bar__items {
     margin-top: 50px;
+    border-top: 1px solid #494E55;
   }
   .nav-bar__collpase-btn {
     display: block;
