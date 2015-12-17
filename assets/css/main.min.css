@@ -9847,6 +9847,9 @@ li {
     display: block;
   }
 }
+.content-wrapper {
+  padding: 10px 0px;
+}
 footer {
   width: 100%;
   background-color: #2D3035;
@@ -9856,32 +9859,31 @@ footer {
 .footer__wrapper {
   background-color: #33363B;
 }
-.footer__side-box {
-  background-color: #393C41;
+.footer__left-bar {
   padding: 50px 0px 0px 0px;
   height: 100%;
   float: left;
 }
-.footer__side-box__newslatter {
+.footer__left-bar__newslatter {
   background-color: #FF4F4F;
   padding: 25px 20px;
   font-size: 12px;
 }
-.footer__side-box__newslatter__title {
+.footer__left-bar__newslatter__title {
   font-size: 18px;
   font-weight: 600;
   border-bottom: 2px solid #ffffff;
   padding-bottom: 10px;
 }
-.footer__side-box__newslatter__content {
+.footer__left-bar__newslatter__content {
   padding-top: 10px;
   font-size: 12px;
   font-weight: 400;
 }
-.footer__side-box__newslatter__content__form {
+.footer__left-bar__newslatter__content__form {
   padding-top: 5px;
 }
-.footer__side-box__newslatter__mail-input {
+.footer__left-bar__newslatter__mail-input {
   width: 100%;
   height: 30px;
   background-color: #ffffff;
@@ -9890,7 +9892,7 @@ footer {
   color: black;
   font-size: 13px;
 }
-.footer__side-box__newslatter__mail-button {
+.footer__left-bar__newslatter__mail-button {
   margin-top: 10px;
   height: 30px;
   width: 110px;
@@ -9899,36 +9901,36 @@ footer {
   transition: all 0.3s ease 0s;
   font-weight: bold;
 }
-.footer__side-box__newslatter__mail-button:hover {
+.footer__left-bar__newslatter__mail-button:hover {
   background-color: #3A3D42;
 }
-.footer__side-box__about {
+.footer__left-bar__about {
   padding: 25px 20px;
 }
-.footer__side-box__about__title {
+.footer__left-bar__about__title {
   font-size: 18px;
   font-weight: 600;
   padding-bottom: 10px;
 }
-.footer__side-box__social {
+.footer__left-bar__social {
   padding: 0px 20px;
 }
-.footer__side-box__social__title {
+.footer__left-bar__social__title {
   font-size: 18px;
   font-weight: 600;
   padding-bottom: 10px;
 }
-.footer__bigger {
+.footer__upper {
   border-bottom: 1px solid #555555;
   padding: 50px 0px;
 }
-.footer__bigger__block__title {
+.footer__upper__block__title {
   font-size: 18px;
   font-weight: 600;
   border-bottom: 1px solid #555555;
   padding-bottom: 10px;
 }
-.footer__bigger__block__description {
+.footer__upper__block__description {
   padding: 30px 0px;
 }
 .footer__lower {
@@ -9959,4 +9961,7 @@ footer {
   border-top: 2px solid #494E55;
   line-height: 25px;
   font-size: 12px;
+}
+.copyright-bar a {
+  color: #ff4f4f;
 }
