@@ -9650,7 +9650,7 @@ li {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   float: left;
-  margin-right: 5px;
+  margin: 0px 10px 10px 0px;
   display: block;
   transition: all 0.5s ease 0s;
   width: 40px;
@@ -9660,8 +9660,6 @@ li {
 }
 .social-icons__items__item a:hover {
   background: #FF4F4F;
-  color: #ffffff;
-  border: px solid #ffffff;
 }
 .header__top-bar {
   padding-top: 5px;
@@ -9860,7 +9858,7 @@ footer {
 }
 .footer__side-box {
   background-color: #393C41;
-  padding: 50px 0px;
+  padding: 50px 0px 0px 0px;
   height: 100%;
   float: left;
 }
@@ -9946,6 +9944,10 @@ footer {
 }
 .footer__lower__list-menu__items__item {
   line-height: 20px;
+  transition: all 0.3s ease 0s;
+}
+.footer__lower__list-menu__items__item:hover {
+  color: #FF4F4F;
 }
 .footer__lower__list-menu__items__item i {
   padding-right: 10px;
