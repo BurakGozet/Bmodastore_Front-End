@@ -9629,6 +9629,14 @@ ul,
 li {
   list-style-type: none;
 }
+.col-condensed {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.col-condensed div[class^="col-"] {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 .social-icons__items {
   padding: 5px 0px;
   width: 100%;
