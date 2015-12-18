@@ -56,7 +56,7 @@ gulp.task('browser-sync', function() {
 gulp.task('styles', function() {
   gulp.src(paths.styles.src)
   .pipe(concat(paths.styles.destname))
-  .pipe(less())
+  .pipe(less().on('error', handleError))
   .pipe(gulp.dest(paths.styles.dest))
   .pipe(browserSync.stream())
   .pipe(rename({suffix: ".min"}))
