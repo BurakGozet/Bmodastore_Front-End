@@ -1,0 +1,145 @@
+.cart{
+    float: right;
+    display: block;
+    padding-left: 15px;
+    line-height: 50px;
+    background-color: #494E55;
+}
+
+.cart a {
+
+}
+
+.cart__quantity{
+    float: right;
+    padding: 0px 20px;
+    line-height: 50px;
+    background-color: #ff4f4f;
+    margin-left: 10px;
+}
+
+.cart__view{
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    background-color: #ffffff;
+    z-index: 10;
+    width: 270px;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 400;
+    font-family: arial,sans-serif;
+    .transition(all 0.5s ease 0s);
+    overflow: hidden;
+    border: 1px solid #d7d7d7;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cart:hover .cart__view{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart__view__items{
+    display: block;
+    float: left;
+}
+
+.cart__view__items__item{
+    padding: 20px;
+    float: left;
+    border-bottom: 1px solid #d7d7d7;
+    width: 100%;
+    position: relative;
+}
+
+.cart__view__items__item__image{
+    float: left;
+}
+
+.cart__view__items__delete-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    .transition(all 0.3s ease 0s);
+}
+
+.cart__view__items__delete-btn:hover{
+    color: #ff4f4f;
+}
+
+.cart__view__items__info{
+    padding-left: 10px;
+    float: left;
+    line-height: 22px;
+}
+
+.cart__view__items__name{
+    .transition(all 0.3s ease 0s);
+}
+
+.cart__view__items__name:hover{
+    color: #ff4f4f;
+}
+
+.cart__view__items__count{
+    color: #AFAFAF;
+    padding-right: 5px;
+}
+
+.cart__view__items__features{
+    color: #AFAFAF;
+    font-size: 13px;
+}
+
+.cart__view__info{
+    padding:20px;
+    float: left;
+    width: 100%;
+    color: #515151;
+}
+
+.cart__view__info__shipping-price{
+    float: left;
+    width: 100%;
+    line-height: 30px;
+}
+
+.cart__view__info__total-price{
+    float: left;
+    width: 100%;
+    line-height: 30px;
+    border-top: 1px solid #000000;
+}
+
+.cart__view__info__price{
+    float: right;
+}
+
+.cart__view__buy{
+    width: 100%;
+    padding:10px 20px;
+    float: left;
+    background-color: #F6F6F6;
+}
+
+.cart__view__buy-button{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.cart__view__buy-button a{
+  background: #494E55;
+  color: #ffffff;
+  padding: 0px 34px;
+  display: inline-block;
+  line-height: 34px;
+  .transition(all 0.3s ease 0s);
+}
+
+.cart__view__buy-button a:hover{
+  background: #ff4f4f;
+}

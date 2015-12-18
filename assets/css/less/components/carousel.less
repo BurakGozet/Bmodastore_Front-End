@@ -2,16 +2,31 @@
     margin-top: 50px;
 }
 
-.carousel__products .product-box{
-    width: 262px;
+.carousel-fw__wrapper{
+    margin-top: 50px;
 }
 
-.carousel__center__products .product-box{
-    width: 204px;
+.carousel__items__wrapper{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__items{
+    width: 10000px;
+    left: 0;
+}
+
+.carousel__items .product-box{
+    width: 220px;
 }
 
 .carousel-left-title{
-    
+    position: relative;
+}
+
+.carousel-center-title{
+    position: relative;
 }
 
 .carousel-left-title__text{
@@ -22,7 +37,7 @@
     line-height:45px;
     margin-bottom:10px;
     position: relative;
-    width: 70%;
+    width: 100%;
 }
 
 .carousel-left-title__text:before{
@@ -64,7 +79,9 @@
     vertical-align: top;
     float: right;
     position: absolute;
-    right: 0;
+    top: 0;
+    right: 0px;
+    background-color: #ffffff;
 }
 
 .carousel-title__button{
@@ -73,4 +90,5 @@
     line-height: 25px;
     text-align: center;
     font-size: 18px;
+    margin:0px 2px;
 }
