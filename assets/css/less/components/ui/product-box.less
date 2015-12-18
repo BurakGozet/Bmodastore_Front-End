@@ -17,9 +17,9 @@
   position: absolute;
   top: 3%;
   line-height: 25px;
-  background-color: #ff4f4f;
+  background-color: @color2;
   padding: 0px 10px;
-  color: #ffffff;
+  color: @color4;
 }
 
 .product-box__image__side-menu {
@@ -34,15 +34,15 @@
   height: 25%;
   text-align: center;
   width: 65px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid @color9;
   background-color: rgba(70, 70, 70, 0.5);
   .transition(all 0.3s ease 0s);
-  color: #ffffff;
+  color: @color4;
   font-size: 24px;
 }
 
 .product-box__image__side-menu__item:hover {
-  background-color: #FF4F4F;
+  background-color: @color2;
 }
 
 .product-box__image__side-menu__item a {
@@ -93,17 +93,18 @@
 }
 
 .product-box__info__product-name a:hover {
-  color: #ff4f4f;
+  color: @color2;
 }
 
 .product-box__info__price {
-  color: #ff4f4f;
+  color: @color2;
   font-weight: bold;
   font-size: 18px;
   font-family: 'Oswald', sans-serif;
 }
+
 .product-box__info__discounted-price {
-  color: #888888;
+  color: @color10;
   font-weight: 400;
   font-size: 13px;
   text-decoration: line-through;
