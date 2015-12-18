@@ -8,7 +8,6 @@ autoprefixer = require('gulp-autoprefixer'),
 rename = require("gulp-rename"),
 minifycss = require('gulp-minify-css'),
 concatcss = require('gulp-concat-css'),
-colors = require('colors'),
 browserSync = require('browser-sync').create();
 
 var paths = {
